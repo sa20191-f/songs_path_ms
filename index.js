@@ -5,7 +5,9 @@ const BodyParser = require("body-parser");
 var app = Express();
 Mongoose.connect("mongodb://songs_path_db:27017/songs",{ useNewUrlParser: true });
 const PathModel = Mongoose.model("song_path", {
-  path: String
+  path: String,
+  song_name: String,
+  artist: String
 });
 
 app.use(BodyParser.json());
