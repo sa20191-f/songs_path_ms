@@ -9,8 +9,9 @@ services:
     container_name: songs_path_ms
     restart: always
     build: .
-    ports:
-      - "3003:3003"
+    environment:
+      PORT: '3003'
     links:
       - songs_path_db
-  
+    ports:
+      - "3003:3003"
