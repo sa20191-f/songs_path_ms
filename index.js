@@ -3,7 +3,7 @@ const Mongoose = require("mongoose");
 const BodyParser = require("body-parser");
 
 var app = Express();
-Mongoose.connect("mongodb://songs_path_db:27017/songs",{ useNewUrlParser: true });
+Mongoose.connect("mongodb://songs-path-db:27017/songs",{ useNewUrlParser: true });
 const PathModel = Mongoose.model("song_path", {
   path: String,
   song_name: String,
